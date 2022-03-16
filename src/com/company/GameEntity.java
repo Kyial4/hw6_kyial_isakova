@@ -1,12 +1,12 @@
 package com.company;
 
 public class GameEntity {
-    public int health=0;
-    public int damage=0;
+    private int health;
+    private int damage;
 
     public GameEntity(int health, int damage) {
-        setHealth(250);
-        setDamage(50);
+        this.health = health;
+        this.damage = damage;
     }
 
     public int getHealth() {

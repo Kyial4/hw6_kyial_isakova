@@ -3,12 +3,17 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        Boss boss= new Boss(250,200,"AK-47");
-        System.out.println("The boss has paramets:"+""+
-                boss.getHealth()+ " "+ boss.damage+ " "+boss.getWeapon());
-        System.out.println("_______________");
+        Boss boss= new Boss(250,200);
+        boss.weapon.setNameOfWeapon("лук");
+        boss.weapon.setTypeOfWeapon("стрелы");
         System.out.println(boss.printInfo());
-        Skeleton skeleton=new Skeleton(100,100,"drobovik");
-        System.out.println(skeleton.getHealth()+" "+ skeleton.damage+ " "+ skeleton.getWeapon());
+        Skeleton skeleton=new Skeleton(100,100,10);
+        skeleton.weapon.setNameOfWeapon("пистолет");
+        skeleton.weapon.setTypeOfWeapon("пули");
+        System.out.println(skeleton.printInfo());
+        Skeleton skeleton1=new Skeleton(90,1,1);
+        skeleton1.weapon.setNameOfWeapon("автомат");
+        skeleton1.weapon.setTypeOfWeapon("пули");
+        System.out.println(skeleton1.printInfo());
     }
 }
